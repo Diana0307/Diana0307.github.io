@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>geolocalizacion</title>
+  	<meta  name="viewport" content="initial-scale=1.0, user-scalable=no">
+  	<meta charset="utf-8">
+
+     <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="css/fontello.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/tesoem.css">
+  	<style >
+  		html, body, #mimapa {
+        height: 350px;
+        margin: 0px;
+        padding: 0px;
+
+      }
+
+  	</style>
+  <script src="./ServiceWorker.js"></script>
+  	 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    
+  	<script>
+      var map;
+           function localizame(){
+            var mapOptions ={
+              zoom: 9
+            };
+            
+              map = new google.maps.Map(document.getElementById('mimapa'),
+                   mapOptions);
+
+              if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(function(position) {
+                  var pos = new google.maps.LatLng(position.coords.latitude,
+                                                  position.coords.longitude);
+
+
+        
+
+                  var InfoWindow = new google.maps.InfoWindow({
+                    map: map,
+                    position: pos,
+                    content: ' te hemos encontrado'
+                   });
+                      map.setCenter(pos);
+                }, function(){
+                  handleNoGeolocation(true);
+                });
+              }else{
+                handleNoGeolocation(false);
+              } 
+           }
+
+            function handleNoGeolocation(errorFlag){
+              if(erroFlag){
+                var content ='error  servicio';
+              }else{
+                var content ='error sopporte'
+              }
+
+              var options ={
+                map:map,
+                position: new google.maps.LatLng(60,105),
+                content: content
+              };
+              var InfoWindow = new google.maps.InfoWindow(options);
+              map.setCenter(options.position)
+            }
+
+           
+           google.maps.event.addDomListener(window, 'load', localizame);
+
+
+ 
+    </script>
+
+  	</head>
+  	<body>
+      <header>
+        <div class="contenedor"></div>
+          <h1 class="icon-chrome"> MI GEOLOCALIZACION</h1>
+
+      </header>
+
+
+      <main>
+
+          <section id="tesoem">
+            <img src="img/geo.jpg">
+            <div class="contenedor">
+              <h2>¿QUIERES SABER TU UBICACION?</h2>
+              <p> Me da gusto verte espero y puedas entrar sin problema </p>
+            </div>
+            
+          </section>
+          <section id="BIENVENIDOS"></section>
+          <h2> BIENVENIDOS TU UBICACION ES ESTA</h2>
+          <p>Esta paginawe sirve para la geolocalizacion en tiempo real disfrutala </p>
+
+        </main>
+
+
+  		<div id="mimapa"></div>
+     
+
+  	</body>
+    </html>

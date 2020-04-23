@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="user" unicode="&#xe800;" d="M714 69q0-60-35-104t-84-44h-476q-49 0-84 44t-35 104q0 48 5 90t17 85 33 73 52 50 76 19q73-72 174-72t175 72q42 0 75-19t52-50 33-73 18-85 4-90z m-143 495q0-88-62-151t-152-63-151 63-63 151 63 152 151 63 152-63 62-152z" horiz-adv-x="714.3" />
+
+<glyph glyph-name="chrome" unicode="&#xe841;" d="M498 850c-147-1-291-67-387-186l154-237c39 111 150 182 267 170l414-22c-42 84-108 157-196 208-79 46-166 67-252 67z m-416-226c-52-79-82-173-82-274 0-250 183-457 423-494l128 252c-116-22-233 39-281 146l-188 370z m885-94l-282-15c76-89 82-221 13-317l-226-347c94-6 190 15 278 66 216 125 304 387 217 613z m-467-11c-93 0-169-76-169-169s76-169 169-169 169 76 169 169-76 169-169 169z" horiz-adv-x="1000" />
+
+<glyph glyph-name="facebook-squared" unicode="&#xf308;" d="M696 779q67 0 114-48t47-113v-536q0-66-47-113t-114-48h-104v333h111l16 129h-127v83q0 31 13 46t51 16l68 1v115q-35 5-100 5-75 0-121-44t-45-127v-95h-112v-129h112v-333h-297q-67 0-114 48t-47 113v536q0 66 47 113t114 48h535z" horiz-adv-x="857.1" />
+</font>
+</defs>
+</svg>
