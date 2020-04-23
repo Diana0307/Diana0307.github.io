@@ -1,8 +1,8 @@
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'v1_cache_geolocalizacion';
 var urlsToCache = [
   '/',
-  '/styles/main.css',
-  '/script/main.js'
+  '/estilos.css',
+  '/script.js'
 ];
 
 self.addEventListener('install', function(event) {
