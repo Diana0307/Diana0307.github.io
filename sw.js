@@ -2,7 +2,12 @@ var CACHE_NAME = 'v1_cache_geolocalizacion';
 var urlsToCache = [
   '/',
   '/estilos.css',
-  '/script.js'
+  '/script.js',
+  '/fontello.css',
+  '/tesoem.css',
+  '/manifest.json'
+  
+  
 ];
 
 self.addEventListener('install', function(event) {
@@ -16,20 +21,6 @@ self.addEventListener('install', function(event) {
   );
 });
 
-//una vez que se instala el SW, se activa y busca los recursos para hacer que funcione sin conexión
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        // Cache hit - return response
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
-});
 
 //cuando el navegador recupera una url
 self.addEventListener('fetch', function(event) {
