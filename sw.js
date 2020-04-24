@@ -5,7 +5,9 @@ var urlsToCache = [
   '/script.js',
   '/font/fontello.css',
   '/css/tesoem.css',
-  '/manifest.json'
+  '/manifest.json',
+  '/img/geo.jpg'
+
   
   
 ];
