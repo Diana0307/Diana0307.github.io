@@ -22,6 +22,19 @@ self.addEventListener('install', function(event) {
 });
 
 
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});
 //cuando el navegador recupera una url
 self.addEventListener('fetch', function(event) {
   event.respondWith(
