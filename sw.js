@@ -1,6 +1,7 @@
 var CACHE_NAME = 'v1_cache_geolocalizacion';
 var urlsToCache = [
   '/',
+  'https://maps.googleapis.com/maps/api/js?v=3.exp',
   '/css/estilos.css',
   '/script.js',
   '/font/fontello.css',
